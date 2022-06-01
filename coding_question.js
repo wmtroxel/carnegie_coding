@@ -136,4 +136,19 @@ var razorbat = new Student("RazorBat", [
 var next_problem = problems_available.find_best_problem_for_student(razorbat, 0.95);
 console.log("For " + razorbat.name + ", we recommend: " + next_problem.handle);
 
+var pumpkinofdoom = new Student("PumpkinOfDoom", [
+	new Ability(add_decimals, new SkillLevel(.33)),
+	new Ability(add_fractions, new SkillLevel(.96)),
+	new Ability(multiply_decimals, new SkillLevel(.81)),
+	new Ability(multiply_fractions, new SkillLevel(.47))
+]);
 
+next_problem = problems_available.find_best_problem_for_student(pumpkinofdoom, 0.95);
+console.log("For " + pumpkinofdoom.name + ", we recommend: " + next_problem.handle);
+
+var wonderbrain = new Student("WonderBrain", [
+	new Ability(add_fractions, new SkillLevel(.23))
+]);
+
+next_problem = problems_available.find_best_problem_for_student(wonderbrain, 0.95);
+console.log("For " + wonderbrain.name + ", we recommend: " + next_problem.handle);
