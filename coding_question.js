@@ -46,7 +46,7 @@ class Student {
 	needs_help_with(skill, threshold) {
 		for (var i = 0; i < this.skillset.length; ++i) {
 			var ability = this.skillset[i];
-			if (ability.skill.handle = skill.skill_name && ability.skill_level < threshold) {
+			if (ability.skill.skill_name == skill.skill_name && ability.skill_level.value < threshold) {
 				return true;
 			}
 		}
@@ -133,7 +133,7 @@ var razorbat = new Student("RazorBat", [
 	new Ability(multiply_fractions, new SkillLevel(.53))
 ]);
 
-var next_problem = problems_available.find_best_problem_for_student(razorbat);
+var next_problem = problems_available.find_best_problem_for_student(razorbat, 0.95);
 console.log("For " + razorbat.name + ", we recommend: " + next_problem.handle);
 
 
